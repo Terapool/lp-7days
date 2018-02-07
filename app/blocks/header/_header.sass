@@ -1,0 +1,101 @@
+.header
+  height: $headerHeight
+  width: $widthDesktop
+  margin: 0 auto
+  background: url('../img/header__bg-1200.jpg') no-repeat center top
+  display: flex
+  justify-content: center
+
+  @media screen and (max-width: $widthDesktop)
+    background: none
+    width: $widthTablet1
+  @media screen and (max-width: $widthTablet1)
+    width: $widthTablet2
+  @media screen and (max-width: $widthTablet2)
+    width: 100%
+    height: $headerHeight * 3
+    flex-wrap: wrap
+    background: none
+
+  &-address
+    width: 232px
+    align-self: center
+    margin-left: $margin-01
+    @media screen and (max-width: $widthDesktop)
+      margin-left: $margin-02
+    @media screen and (max-width: $widthTablet1)
+      margin-left: $margin-03
+    @media screen and (max-width: $widthTablet2)
+      width: 100%
+      height: $headerHeight
+      background: $color-05
+      margin: 0
+
+    &__address
+      font-family: $fontFamily-01
+      font-size: 18px
+      line-height: 25px
+      margin: 10px auto
+      color: $color-00
+      text-align: center
+      text-shadow: 2px 2px 2px $color-05
+      @media screen and (max-width: $widthTablet2)
+        width: 300px
+        margin: 30px auto 10px
+
+    &__openh
+      border-top: 5px dotted $color-00
+      font-family: $fontFamily-01
+      font-size: 18px
+      line-height: 35px
+      color: $color-01
+      text-align: center
+      text-shadow: 2px 2px 2px $color-05
+      @media screen and (max-width: $widthTablet2)
+        width: 300px
+        display: block
+        margin: 0 auto
+
+  &-logo
+    flex-grow: 1
+    height: $headerHeight
+    @media screen and (max-width: $widthTablet2)
+      width: 100%
+      height: $headerHeight
+
+  &-phones
+    width: 270px
+    align-self: center
+    @media screen and (max-width: $widthTablet2)
+      background: $color-04
+      width: 100%
+      height: $headerHeight
+
+
+    &__phone
+      font-family: $fontFamily-01
+      color: $color-00
+      font-size: 25px
+      line-height: 41px
+      text-shadow: 2px 2px 2px $color-05;
+      background: url(../img/header-phones__operator.png) left top no-repeat
+      text-align: right
+      margin-right: $margin-01
+      @media screen and (max-width: $widthDesktop)
+        margin-right: $margin-02
+      @media screen and (max-width: $widthTablet1)
+        margin-right: $margin-03
+      @media screen and (max-width: $widthTablet1)
+        margin: $margin-03 auto
+        width: 250px
+        display: block
+
+      &_velcom
+        background-position: 0 0
+
+      &_mts
+        background-position: 0 -41px
+
+
+
+

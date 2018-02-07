@@ -1,0 +1,24 @@
+body
+  background: $color-b01
+
+.wrapper-header
+  display: flex
+  justify-content: center
+  @media screen and (max-width: $widthDesktop)
+    background: url('../img/header__bg-1200.jpg') center  top repeat-x
+
+  @media screen and (max-width: $widthTablet2)
+    background: url('../img/header__bg-1200.jpg') center repeat-x
+
+  &-left
+    flex-grow: 1
+    background: url('../img/wrapper-header-space.jpg') right top repeat-x
+    @media screen and (max-width: $widthDesktop)
+      background: none
+
+  &-right
+    flex-grow: 1
+    background: url('../img/wrapper-header-space.jpg') left  top repeat-x
+    @media screen and (max-width: $widthDesktop)
+      background: none
+

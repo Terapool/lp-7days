@@ -4,6 +4,9 @@
 const gulp = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Project constants
 
@@ -18,15 +21,44 @@ gulp.task('build:clean', ()=>
     del('build')
 );
 
-gulp.task('build', ['build:html']); // Entry point for build
+gulp.task('build:sass', ()=>
+    gulp.src('app/blocks/**/*.sass')
+        .pipe(sourcemaps.init())
+        .pipe(sass())
+        .pipe(rename('styles.css'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build/css'))
+);
 
-gulp.task('build:watch', ()=>
-    gulp.watch('app/index.html', ['build:html', browserSync.reload])
+gulp.task('build:assets', () =>
+    gulp.src('app/img/**/*.*')
+        .pipe(gulp.dest('build/img'))
+);
+
+gulp.task('build', ['build:html', 'build:sass', 'build:assets']); // Entry point for build
+
+gulp.task('build:watch', ()=> {
+        gulp.watch('app/index.html', ['build:html', browserSync.reload]);
+        gulp.watch('app/blocks/**/*.sass', ['build:sass', browserSync.reload]);
+        gulp.watch('app/img/**/*.*', ['build:assets', browserSync.reload])
+    }
 );
 
 
 
 // Prod ----------------------------------------------------
+
+gulp.task('prod:sass', ()=>
+    gulp.src('app/blocks/**/*.sass')
+        .pipe(sass())
+        .pipe(rename('styles.css'))
+        .pipe(gulp.dest('prod/css'))
+);
+
+gulp.task('prod:assets', () =>
+    gulp.src('app/img/**/*.*')
+        .pipe(gulp.dest('prod/img'))
+);
 
 gulp.task('prod:clean', ()=>
     del('prod')
@@ -37,7 +69,7 @@ gulp.task('prod:html', ()=>
         .pipe(gulp.dest('prod'))
 );
 
-gulp.task('prod', ['prod:html']); // Entry point for prod
+gulp.task('prod', ['prod:html', 'prod:assets', 'prod:sass']); // Entry point for prod
 
 
 // Common tasks --------------------------------------------
