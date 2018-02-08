@@ -7,6 +7,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 
 // Project constants
 
@@ -30,17 +31,22 @@ gulp.task('build:sass', ()=>
         .pipe(gulp.dest('build/css'))
 );
 
-gulp.task('build:assets', () =>
-    gulp.src('app/img/**/*.*')
-        .pipe(gulp.dest('build/img'))
-);
+gulp.task('build:assets', () => {
+        gulp.src('app/img/**/*.*')
+            .pipe(gulp.dest('build/img'));
+        gulp.src('app/slides/**/*.*')
+            .pipe(gulp.dest('build/img/slides'));
+        gulp.src('app/fonts/**/*.*')
+            .pipe(gulp.dest('build/fonts'));
+});
+
 
 gulp.task('build', ['build:html', 'build:sass', 'build:assets']); // Entry point for build
 
 gulp.task('build:watch', ()=> {
         gulp.watch('app/index.html', ['build:html', browserSync.reload]);
         gulp.watch('app/blocks/**/*.sass', ['build:sass', browserSync.reload]);
-        gulp.watch('app/img/**/*.*', ['build:assets', browserSync.reload])
+        gulp.watch('app/{img,slides,fonts}/**/*.*', ['build:assets', browserSync.reload])
     }
 );
 
@@ -51,6 +57,7 @@ gulp.task('build:watch', ()=> {
 gulp.task('prod:sass', ()=>
     gulp.src('app/blocks/**/*.sass')
         .pipe(sass())
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(rename('styles.css'))
         .pipe(gulp.dest('prod/css'))
 );

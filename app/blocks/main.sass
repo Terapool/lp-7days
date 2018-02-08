@@ -1,38 +1,146 @@
 // Screens for responsive design
 
-$widthDesktop: 1200px // width of content for Desktop
-$widthTablet1: 992px // width of content for Tablet1
-$widthTablet2: 768px // width of content for Tablet2
-$widthMobile1: 576px // width of content for Mobile1
-$widthMobile2: 320px // width of content for Mobile2
+$s1w: 1202px // Screen width no 1
+$s2w: 992px // Screen width no 2
+$s3w: 768px // Screen width no 3
+$s4w: 576px // Screen width no 4
+$s5w: 320px // Screen width no 5
+
+$delta: 20px // Width of vertical browser scroll
+
+$s1: $s1w + $delta // Screen setpoint no 1
+$s2: $s2w + $delta // Screen setpoint no 2
+$s3: $s3w + $delta // Screen setpoint no 3
+$s4: $s4w + $delta // Screen setpoint no 4
+$s5: $s5w + $delta // Screen setpoint no 5
+
+
+
+// page elements
+$headerHeight: 160px
+$stripHeight: 12px // Blue line that divides sections
+
+// Margins, columns
+
+// for Desktop
+$columnWidth-01: 263px
+
+$margin-01: 30px // to be even
+
+$padding-01: 15px
+
+$margin-01-v: 50px // to be even
+
+// for Tablet1
+
+$columnWidth-02: 213px
+
+$margin-02: 28px // to be even
+
+$padding-02: 10px
+
+$margin-02-v: 40px // to be even
+
+// for Tablet2
+
+$columnWidth-03: 232px
+
+$margin-03: 18px // to be even
+
+$padding-03: 12px
+
+$margin-03-v: 30px // to be even
+
+
+// for Mobile1
+
+$columnWidth-04: 255px
+
+$margin-04: 22px // to be even
+
+$padding-04: 12px
+
+$margin-04-v: 26px // to be even
+
+// for Mobile2
+
+$columnWidth-05: 300px
+
+$margin-05: 10px // to be even
+
+$padding-05: 10px
+
+$margin-05-v: 20px // to be even
+
+
 
 // Colors
 
 $color-b01: #DBE0E6
 $color-00: #FFFFFF
+$color-00tr: rgba(255, 255, 255, 0.5)
 $color-01: #FFFF00
 $color-02: #EE9600
-$color-03: #7DBAF6
-$color-04: #0380FF
-$color-05: #000308
-$color-06: #2A5076
-$color-07: #000000
+$color-03: #6BAAEA // Section strips
+$color-04: #0380FF // Bottom of the header for s4 - s5
+$color-05: #000308 // Top of the header for s4 - s5, text shadow
+$color-08: #000912 // Slider bg
+$color-09: #0C3f6C // Intro text
+$color-10: #0077ED
+$color-10tr: rgba(0, 119, 237, 0.75)
+
 
 
 // Fonts
 $fontFamily-01: Arial, Helvetica, sans-serif
+$fontFamily-02: Gabriola, 'Gabriola M'
+$fontFamily-03: 'Roboto Condensed', sans-serif
+
+@font-face
+  font-family: 'Gabriola M'
+  src:  url('../fonts/Gabriola.woff2') format('woff2'), url('../fonts/Gabriola.woff') format('woff'), url('../fonts/Gabriola.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
 
 
-// page elements
-$headerHeight: 160px
-
-$stripHeight: 12px // Blue line that divides sections
-
-$margin-01: 30px // for Desktop
-$margin-02: 28px // for Desktop
-$margin-03: 20px // for Desktop
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff'), url('../fonts/RobotoCondensed-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
 
 
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-LightItalic.woff') format('woff'), url('../fonts/RobotoCondensed-LightItalic.ttf') format('truetype')
+  font-weight: 300
+  font-style: italic
+
+
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'), url('../fonts/RobotoCondensed-Bold.woff') format('woff'), url('../fonts/RobotoCondensed-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+
+
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff') format('woff'), url('../fonts/RobotoCondensed-Light.ttf') format('truetype')
+  font-weight: 300
+  font-style: normal
+
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url('../fonts/RobotoCondensed-Italic.woff2') format('woff2'), url('../fonts/RobotoCondensed-Italic.woff') format('woff'), url('../fonts/RobotoCondensed-Italic.ttf') format('truetype')
+  font-weight: normal
+  font-style: italic
+
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url('../fonts/RobotoCondensed-BoldItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-BoldItalic.woff') format('woff'), url('../fonts/RobotoCondensed-BoldItalic.ttf') format('truetype')
+  font-weight: bold
+  font-style: italic
 
 
 
@@ -42,6 +150,10 @@ $margin-03: 20px // for Desktop
 @import "page-structure"
 
 @import "header/header"
+@import "slider/slider"
+@import "intro/intro"
+
+
 
 
 

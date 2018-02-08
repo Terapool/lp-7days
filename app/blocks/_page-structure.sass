@@ -4,21 +4,40 @@ body
 .wrapper-header
   display: flex
   justify-content: center
-  @media screen and (max-width: $widthDesktop)
-    background: url('../img/header__bg-1200.jpg') center  top repeat-x
-
-  @media screen and (max-width: $widthTablet2)
-    background: url('../img/header__bg-1200.jpg') center repeat-x
+  @media screen and (max-width: $s1)
+    background: url('../img/header__bg-1202.jpg') center repeat-x
 
   &-left
     flex-grow: 1
     background: url('../img/wrapper-header-space.jpg') right top repeat-x
-    @media screen and (max-width: $widthDesktop)
+    @media screen and (max-width: $s1)
       background: none
 
   &-right
     flex-grow: 1
     background: url('../img/wrapper-header-space.jpg') left  top repeat-x
-    @media screen and (max-width: $widthDesktop)
+    @media screen and (max-width: $s1)
       background: none
+
+.section-slider
+  display: flex
+  justify-content: center
+  background: $color-08
+  @media screen and (max-width: $s4)
+    display: none
+
+  &-left
+    flex-grow: 1
+    background: url('../img/slider_bg.jpg') right top no-repeat
+
+  &-right
+    flex-grow: 1
+    background: url('../img/slider_bg.jpg') left top no-repeat
+    background-position: 0 -380px
+
+.section_strip-top
+  border-top: $stripHeight solid $color-03
+.section_strip-bottom
+  border-bottom: $stripHeight solid $color-03
+
 
