@@ -1,55 +1,29 @@
 .intro
-  width: $s1w
-  margin: 0 auto
+  @extend %centered-inclosure
   font-family: $fontFamily-03
-  @media screen and (max-width: $s1)
-    width: $s2w
-  @media screen and (max-width: $s2)
-    width: $s3w
-  @media screen and (max-width: $s3)
-    width: $s4w
-  @media screen and (max-width: $s4)
-    width: $s5w
 
   &__title
     text-align: center
     color: $color-10
     text-transform: uppercase
     font-size: 50px
-    margin-top: $margin-01-v
+    margin-top: $s1marginV
     font-weight: 300
     @media screen and (max-width: $s1)
       font-size: 45px
-      margin-top: $margin-02-v
+      margin-top: $s2marginV
     @media screen and (max-width: $s2)
       font-size: 40px
-      margin-top: $margin-03-v
+      margin-top: $s3marginV
     @media screen and (max-width: $s3)
       font-size: 36px
-      margin-top: $margin-04-v
+      margin-top: $s4marginV
     @media screen and (max-width: $s4)
       font-size: 26px
-      margin: $margin-05-v $margin-05 0
-
+      margin: $s5marginV $s5margin 0
 
   &__subtitle
-    text-align: center
-    color: $color-09
-    font-size: 36px
-    margin-top: $margin-01-v/2
-    font-style: italic
-    @media screen and (max-width: $s1)
-      font-size: 30px
-      margin-top: $margin-02-v/2
-    @media screen and (max-width: $s2)
-      font-size: 25px
-      margin-top: $margin-03-v/2
-    @media screen and (max-width: $s3)
-      font-size: 25px
-      margin-top: $margin-04-v/2
-    @media screen and (max-width: $s4)
-      font-size: 20px
-      margin: $margin-05-v/2 $margin-05 0
+    @extend %headerH2
 
   &__text
     color: $color-09
@@ -57,102 +31,76 @@
     font-size: 21px
     text-align: center
     width: 60%
-    margin: $margin-01-v/2 auto
+    margin: $s1marginV/2 auto
     @media screen and (max-width: $s1)
       width: 75%
-      margin: $margin-02-v/2 auto
+      margin: $s2marginV/2 auto
       font-size: 19px
     @media screen and (max-width: $s2)
-      margin: $margin-03-v/2 auto
+      margin: $s3marginV/2 auto
       font-size: 19px
       width: 90%
     @media screen and (max-width: $s3)
-      margin: $margin-04-v/2 auto
+      margin: $s4marginV/2 auto
       font-size: 19px
       width: 90%
     @media screen and (max-width: $s4)
-      margin: $margin-05-v/2 auto
+      margin: $s5marginV/2 auto
       font-size: 18px
       width: 95%
 
   &-properties
-    display: flex
-    margin-top: $margin-01-v
-    @media screen and (max-width: $s1)
-      margin-top: $margin-02-v
-    @media screen and (max-width: $s2)
-      flex-direction: column
-      margin-top: $margin-03-v
-    @media screen and (max-width: $s3)
-      margin-top: $margin-04-v
-    @media screen and (max-width: $s4)
-      margin-top: $margin-05-v
-
+    @extend %grid-wrapper
 
     &-item
-      width: $columnWidth-01
-      margin: 0 $margin-01/2
+      width: $s1column
       display: flex
       flex-direction: column
-      &:first-child
-        margin-left: $margin-01
       @media screen and (max-width: $s1)
-        width: $columnWidth-02
-        margin: 0 $margin-02/2
-        &:first-child
-          margin-left: $margin-02
+        width: $s2column
       @media screen and (max-width: $s2)
-        width: $s3w - 2 * $margin-03
-        margin: $margin-03 0
+        width: 100%
         flex-direction: row
-        &:first-child
-          margin-left: 0
+        justify-content: space-between
+
       @media screen and (max-width: $s3)
-        width: $s4w - 2 * $margin-04
-        margin: $margin-04 0
+        margin: $s4margin auto
       @media screen and (max-width: $s4)
-        width: $s5w - 2 * $margin-05
-        margin: $margin-05 $margin-05
+        margin: $s5margin auto
 
-        &:first-child
-          margin-left: $margin-05
-
-
-      &__pic
-        width: 193px
-        height: 143px
-        margin: 0 ($columnWidth-01 - 193px)/2
-        background: url('../img/intro-props.jpg') top center no-repeat
-        @media screen and (max-width: $s1)
-          margin: 0 ($columnWidth-02 - 193px)/2
-        @media screen and (max-width: $s2)
-          margin: 0 ($columnWidth-03 - 193px)/2 + $margin-03
+      &-picture
+        @extend %grid-item-wrapper
+        display: flex
+        justify-content: center
         @media screen and (max-width: $s3)
-          margin: $margin-04-v ($columnWidth-04 - 193px)/2 + $margin-04 auto
+          width: $introImgWidth
         @media screen and (max-width: $s4)
           display: none
 
-        &_var1
-          background-position: 0 0
+        &__picture
+          width: $introImgWidth
+          height: $introImgHeigth
+          background: url('../img/intro-props.jpg') top center no-repeat
 
-        &_var2
-          background-position: 0 -143px
-
-        &_var3
-          background-position: 0 -286px
-
-        &_var4
-          background-position: 0 -429px
+          &_var1
+            background-position: 0 0
+          &_var2
+            background-position: 0 -143px
+          &_var3
+            background-position: 0 -286px
+          &_var4
+            background-position: 0 -429px
 
       &-text
+        width: $s1column
+        @media screen and (max-width: $s1)
+          width: $s2column
         @media screen and (max-width: $s2)
-          width: 2 * $columnWidth-03 + $margin-03
-          margin: 0
+          width: 2 * $s3column + $s3margin
         @media screen and (max-width: $s3)
-          width: $columnWidth-04
+          width: $s4 - 2 * $s4margin - $introImgWidth
         @media screen and (max-width: $s4)
-          width: 100%
-
+          width: $s5column
 
         &__title
           color: $color-10
@@ -160,19 +108,18 @@
           font-style: italic
           text-align: center
           font-weight: normal
-          margin-top: $margin-01-v/2
+          margin-top: $s1marginV/2
           @media screen and (max-width: $s1)
             font-size: 18px
-            margin-top: $margin-02-v/2
+            margin-top: $s2marginV/2
           @media screen and (max-width: $s2)
             font-size: 18px
             margin-top: 0
 
-
         &__paragraph
           background: $color-00tr
-          margin-top: $margin-01-v/2
-          padding: $padding-01
+          margin-top: $s1marginV/2
+          padding: $s1padding
           border-radius: 20px
           color: $color-09
           font-size: 16px
@@ -180,12 +127,12 @@
           font-style: italic
           @media screen and (max-width: $s1)
             font-size: 15px
-            padding: $padding-02
-            margin-top: $margin-02-v/2
+            padding: $s2padding
+            margin-top: $s2marginV/2
           @media screen and (max-width: $s2)
             font-size: 17px
-            padding: $padding-03
-            margin-top: $margin-03-v/2
+            padding: $s3padding
+            margin-top: $s3marginV/2
 
 
 

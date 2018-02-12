@@ -1,3 +1,5 @@
+
+
 // Screens for responsive design
 
 $s1w: 1202px // Screen width no 1
@@ -19,64 +21,62 @@ $s5: $s5w + $delta // Screen setpoint no 5
 // page elements
 $headerHeight: 160px
 $stripHeight: 12px // Blue line that divides sections
+$introImgWidth: 193px
+$introImgHeigth: 143px
 
 // Margins, columns
 
-// for Desktop
-$columnWidth-01: 263px
+// for s1
+$s1column: 263px
+$s1margin: 30px // to be even
+$s1padding: 15px
+$s1marginV: 50px // to be even
 
-$margin-01: 30px // to be even
+$s1servImg: 100px // image width in item from Service section
 
-$padding-01: 15px
+// for s2
 
-$margin-01-v: 50px // to be even
+$s2column: 213px
+$s2margin: 28px // to be even
+$s2padding: 10px
+$s2marginV: 40px // to be even
 
-// for Tablet1
+$s2servImg: 89px // image width in item from Service section
 
-$columnWidth-02: 213px
+// for s3
 
-$margin-02: 28px // to be even
+$s3column: 232px
+$s3margin: 18px // to be even
+$s3padding: 12px
+$s3marginV: 30px // to be even
 
-$padding-02: 10px
-
-$margin-02-v: 40px // to be even
-
-// for Tablet2
-
-$columnWidth-03: 232px
-
-$margin-03: 18px // to be even
-
-$padding-03: 12px
-
-$margin-03-v: 30px // to be even
+$s3servImg: 94px // image width in item from Service section
 
 
-// for Mobile1
+// for s4
 
-$columnWidth-04: 255px
+$s4column: 255px
+$s4margin: 22px // to be even
+$s4padding: 12px
+$s4marginV: 26px // to be even
 
-$margin-04: 22px // to be even
+$s4servImg: 95px // image width in item from Service section
 
-$padding-04: 12px
+// for s5
 
-$margin-04-v: 26px // to be even
+$s5column: 300px
+$s5margin: 10px // to be even
+$s5padding: 10px
+$s5marginV: 20px // to be even
 
-// for Mobile2
-
-$columnWidth-05: 300px
-
-$margin-05: 10px // to be even
-
-$padding-05: 10px
-
-$margin-05-v: 20px // to be even
+$s5servImg: 120px // image width in item from Service section
 
 
 
 // Colors
 
 $color-b01: #DBE0E6
+$color-b02: #00254B
 $color-00: #FFFFFF
 $color-00tr: rgba(255, 255, 255, 0.5)
 $color-01: #FFFF00
@@ -96,12 +96,14 @@ $fontFamily-01: Arial, Helvetica, sans-serif
 $fontFamily-02: Gabriola, 'Gabriola M'
 $fontFamily-03: 'Roboto Condensed', sans-serif
 
+$txtSh1: 2px 2px 2px $color-05
+
+
 @font-face
   font-family: 'Gabriola M'
   src:  url('../fonts/Gabriola.woff2') format('woff2'), url('../fonts/Gabriola.woff') format('woff'), url('../fonts/Gabriola.ttf') format('truetype')
   font-weight: normal
   font-style: normal
-
 
 @font-face
   font-family: 'Roboto Condensed'
@@ -109,20 +111,17 @@ $fontFamily-03: 'Roboto Condensed', sans-serif
   font-weight: normal
   font-style: normal
 
-
 @font-face
   font-family: 'Roboto Condensed'
   src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-LightItalic.woff') format('woff'), url('../fonts/RobotoCondensed-LightItalic.ttf') format('truetype')
   font-weight: 300
   font-style: italic
 
-
 @font-face
   font-family: 'Roboto Condensed'
   src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'), url('../fonts/RobotoCondensed-Bold.woff') format('woff'), url('../fonts/RobotoCondensed-Bold.ttf') format('truetype')
   font-weight: bold
   font-style: normal
-
 
 @font-face
   font-family: 'Roboto Condensed'
@@ -143,15 +142,17 @@ $fontFamily-03: 'Roboto Condensed', sans-serif
   font-style: italic
 
 
-
-
 // Imports
 @import "reset"
+@import "templates"
 @import "page-structure"
+
 
 @import "header/header"
 @import "slider/slider"
 @import "intro/intro"
+@import "service/service"
+@import "map/map"
 
 
 

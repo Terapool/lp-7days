@@ -21,11 +21,11 @@
   &-address
     width: 232px
     align-self: center
-    margin-left: $margin-01
+    margin-left: $s1margin
     @media screen and (max-width: $s1)
-      margin-left: $margin-02
+      margin-left: $s2margin
     @media screen and (max-width: $s2)
-      margin-left: $margin-03
+      margin-left: $s3margin
     @media screen and (max-width: $s3)
       width: 100%
       height: $headerHeight
@@ -38,7 +38,7 @@
       margin: 10px auto
       color: $color-00
       text-align: center
-      text-shadow: 2px 2px 2px $color-05
+      text-shadow: $txtSh1
       @media screen and (max-width: $s3)
         width: 300px
         margin: 30px auto 10px
@@ -49,7 +49,7 @@
       line-height: 35px
       color: $color-01
       text-align: center
-      text-shadow: 2px 2px 2px $color-05
+      text-shadow: $txtSh1
       @media screen and (max-width: $s3)
         width: 300px
         display: block
@@ -75,18 +75,20 @@
       color: $color-00
       font-size: 25px
       line-height: 41px
-      text-shadow: 2px 2px 2px $color-05
+      text-shadow: $txtSh1
       background: url(../img/header-phones__operator.png) left top no-repeat
       text-align: right
-      margin-right: $margin-01
+      margin-right: $s1margin
       @media screen and (max-width: $s1)
-        margin-right: $margin-02
+        margin-right: $s2margin
       @media screen and (max-width: $s2)
-        margin-right: $margin-03
+        margin-right: $s3margin
       @media screen and (max-width: $s3)
-        margin: $margin-03 auto
+        margin: $s4margin auto
         width: 250px
         display: block
+      @media screen and (max-width: $s4)
+        margin: $s5margin auto
 
       &_velcom
         background-position: 0 0

@@ -1,0 +1,78 @@
+%centered-inclosure
+  width: $s1w
+  margin: 0 auto
+  @media screen and (max-width: $s1)
+    width: $s2w
+  @media screen and (max-width: $s2)
+    width: $s3w
+  @media screen and (max-width: $s3)
+    width: $s4w
+  @media screen and (max-width: $s4)
+    width: $s5w
+
+
+%grid-wrapper
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: $s1marginV $s1margin
+  @media screen and (max-width: $s1)
+    margin: $s2marginV $s2margin
+  @media screen and (max-width: $s2)
+    margin: $s3marginV $s3margin
+  @media screen and (max-width: $s3)
+    margin: $s4marginV $s4margin
+  @media screen and (max-width: $s4)
+    margin: $s5marginV $s5margin
+
+
+%grid-item
+  width: $s1column - 2 * $s1padding
+  margin-bottom: $s1marginV/2
+  padding: $s1padding
+  @media screen and (max-width: $s1)
+    width: $s2column  - 2 * $s2padding
+    margin-bottom: $s2marginV/2
+    padding: $s2padding
+  @media screen and (max-width: $s2)
+    width: $s3column  - 2 * $s3padding
+    margin-bottom: $s3marginV/2
+    padding: $s3padding
+  @media screen and (max-width: $s3)
+    width: $s4column - 2 * $s4padding
+    padding: $s4padding
+    margin-bottom: $s4marginV/2
+  @media screen and (max-width: $s4)
+    width: $s5column - 2 * $s5padding
+    padding: $s5padding
+    margin-bottom: $s5marginV/2
+
+%grid-item-wrapper
+  width: $s1column
+  @media screen and (max-width: $s1)
+    width: $s2column
+  @media screen and (max-width: $s2)
+    width: $s3column
+  @media screen and (max-width: $s3)
+    width: $s4column
+  @media screen and (max-width: $s4)
+    width: $s5column
+
+%headerH2
+  text-align: center
+  color: $color-09
+  font-size: 36px
+  margin-top: $s1marginV/2
+  font-style: italic
+  @media screen and (max-width: $s1)
+    font-size: 30px
+    margin-top: $s2marginV/2
+  @media screen and (max-width: $s2)
+    font-size: 25px
+    margin-top: $s3marginV/2
+  @media screen and (max-width: $s3)
+    font-size: 25px
+    margin-top: $s4marginV/2
+  @media screen and (max-width: $s4)
+    font-size: 20px
+    margin: $s5marginV/2 $s5margin 0

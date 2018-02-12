@@ -1,0 +1,236 @@
+.service
+  @extend %centered-inclosure
+
+  &__title
+    padding: 1px
+    text-align: center
+    color: $color-02
+    font-style: italic
+    font-size: 36px
+    text-shadow: $txtSh1
+
+  &-props
+    @extend %grid-wrapper
+
+    &-item
+      @extend %grid-item
+      min-height: 150px
+      background: $color-b02
+      border-radius: 20px
+      border: 1px solid $color-b01
+      display: flex
+      flex-wrap: wrap
+
+      justify-content: space-between
+
+      &-image
+        width: $s1servImg
+        height: 80px
+        display: flex
+        justify-content: center
+        @media screen and (max-width: $s1)
+          width: $s2servImg
+
+        &__image
+          width: 88px
+          height: 76px
+          background: url('../img/service-items.jpg') no-repeat top left
+
+          &_var1
+            background-position: 0 0
+          &_var2
+            background-position: 0 -76px
+          &_var3
+            background-position: 0 -152px
+          &_var4
+            background-position: 0 -228px
+          &_var5
+            background-position: 0 -304px
+          &_var6
+            background-position: 0 -380px
+          &_var7
+            background-position: 0 -456px
+
+      &-title
+        width: $s1column - $s1servImg - 3 * $s1padding
+        text-align: center
+        height: 80px
+        line-height: 28px
+        padding-top: $s1padding
+        text-transform: capitalize
+        @media screen and (max-width: $s1)
+          width: $s2column - $s2servImg - 3 * $s2padding
+        @media screen and (max-width: $s2)
+          width: $s3column - $s3servImg - 3 * $s3padding
+        @media screen and (max-width: $s3)
+          width: $s4column - $s4servImg - 3 * $s4padding
+        @media screen and (max-width: $s4)
+          width: $s5column - $s5servImg - 3 * $s5padding
+
+        &__header
+          font-size: 20px
+          color: $color-01
+          font-weight: normal
+          @media screen and (max-width: $s1)
+            font-size: 18px
+          @media screen and (max-width: $s2)
+            font-size: 18px
+          @media screen and (max-width: $s3)
+            font-size: 18px
+          @media screen and (max-width: $s4)
+            font-size: 18px
+
+      &-text
+        width: $s1column - 2 * $s1padding
+        @media screen and (max-width: $s1)
+          width: $s2column - 2 * $s2padding
+        @media screen and (max-width: $s2)
+          width: $s3column - 2 * $s3padding
+        @media screen and (max-width: $s3)
+          width: $s4column - 2 * $s4padding
+        @media screen and (max-width: $s4)
+          width: $s5column - 2 * $s5padding
+
+        &__paragraph
+          color: $color-00
+          text-align: center
+          font-size: 17px
+          line-height: 20px
+    &-item2 // yellow car
+      @extend %grid-item-wrapper
+      background: url('../img/yellow-car.png') center no-repeat
+      position: relative
+      @media screen and (max-width: $s2)
+        width: $s3column * 2 + $s3margin
+      @media screen and (max-width: $s3)
+        width: $s4column
+      @media screen and (max-width: $s4)
+        width: $s5column
+        height: 150px
+
+    &__line
+      position: absolute
+      border: 0
+      border-top: dotted 6px $color-02
+      @media screen and (max-width: $s2)
+        border-top: dotted 5px $color-02
+
+      &_v1
+        top: -14px
+        left: -751px
+        width: 300px
+        transform: rotate(90deg)
+        @media screen and (max-width: $s1)
+          left: -646px
+        @media screen and (max-width: $s2)
+          display: none
+
+      &_v2
+        top: -14px
+        left: -459px
+        width: 300px
+        transform: rotate(90deg)
+        @media screen and (max-width: $s1)
+          left: -405px
+        @media screen and (max-width: $s2)
+          display: none
+
+      &_v3
+        top: -44px
+        left: -136px
+        width: 240px
+        transform: rotate(90deg)
+        @media screen and (max-width: $s2)
+          width: 450px
+          left: -234px
+          top: -100px
+        @media screen and (max-width: $s3)
+          width: 630px
+          left: -326px
+          top: -220px
+        @media screen and (max-width: $s4)
+          display: none
+
+      &_v4
+        top: 8px
+        left: 106px
+        width: 45px
+        transform: rotate(90deg)
+        @media screen and (max-width: $s2)
+          width: 360px
+          top: -146px
+          left: 60px
+        @media screen and (max-width: $s3)
+          width: 40px
+          top: 8px
+          left: 104px
+        @media screen and (max-width: $s4)
+          display: none
+
+      &_h1
+        top: -14px
+        left: -748px
+        width: 879px
+        @media screen and (max-width: $s1)
+          width: 739px
+          left: -608px
+        @media screen and (max-width: $s2)
+          width: 500px
+          left: -120px
+          top: -9px
+        @media screen and (max-width: $s3)
+          width: 277px
+          left: -150px
+        @media screen and (max-width: $s4)
+          display: none
+
+      &_h2
+        top: 74px
+        left: -18px
+        width: 40px
+        @media screen and (max-width: $s1)
+          width: 25px
+        @media screen and (max-width: $s2)
+          width: 500px
+          left: -120px
+          top: -206px
+        @media screen and (max-width: $s3)
+          width: 277px
+          left: -150px
+          top: -202px
+        @media screen and (max-width: $s4)
+          display: none
+
+      &_h3
+        display: none
+        @media screen and (max-width: $s2)
+          display: block
+          width: 120px
+          top: 121px
+          left: 0
+        @media screen and (max-width: $s3)
+          width: 30px
+          top: 100px
+          left: -13px
+        @media screen and (max-width: $s4)
+          display: none
+
+      &_h4
+        display: none
+        @media screen and (max-width: $s3)
+          display: block
+          width: 277px
+          left: -150px
+          top: -416px
+        @media screen and (max-width: $s4)
+          display: none
+
+
+
+
+
+
+
+
+
+

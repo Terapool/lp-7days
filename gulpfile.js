@@ -26,6 +26,7 @@ gulp.task('build:sass', ()=>
     gulp.src('app/blocks/**/*.sass')
         .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(rename('styles.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css'))
