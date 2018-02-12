@@ -27,7 +27,7 @@ gulp.task('build:sass', ()=>
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(rename('styles.css'))
+        .pipe(rename('styles-v02.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css'))
 );
@@ -39,6 +39,8 @@ gulp.task('build:assets', () => {
             .pipe(gulp.dest('build/img/slides'));
         gulp.src('app/fonts/**/*.*')
             .pipe(gulp.dest('build/fonts'));
+        gulp.src('app/gallery/**/*.*')
+            .pipe(gulp.dest('build/img/gallery'));
 });
 
 
@@ -47,7 +49,7 @@ gulp.task('build', ['build:html', 'build:sass', 'build:assets']); // Entry point
 gulp.task('build:watch', ()=> {
         gulp.watch('app/index.html', ['build:html', browserSync.reload]);
         gulp.watch('app/blocks/**/*.sass', ['build:sass', browserSync.reload]);
-        gulp.watch('app/{img,slides,fonts}/**/*.*', ['build:assets', browserSync.reload])
+        gulp.watch('app/{img,slides,fonts,gallery}/**/*.*', ['build:assets', browserSync.reload])
     }
 );
 

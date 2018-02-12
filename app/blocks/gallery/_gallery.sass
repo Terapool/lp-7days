@@ -1,0 +1,66 @@
+.gallery
+    @extend %centered-inclosure
+
+    &__title
+        @extend %headerH2orange
+
+    &-photos
+        @extend %grid-wrapper
+
+        &__item
+            height: 220px
+            margin-bottom: $s1marginV/2
+            box-shadow: $boxSh2
+
+
+            @media screen and (max-width: $s1)
+                height: 175px
+            @media screen and (max-width: $s2)
+                height: 140px
+
+            &_type1
+                width: 164px
+                @media screen and (max-width: $s1)
+                    width: 132px
+                @media screen and (max-width: $s2)
+                    width: 106px
+
+            &_type2
+                width: 294px
+                @media screen and (max-width: $s1)
+                    width: 234px
+                @media screen and (max-width: $s2)
+                    width: 187px
+
+            &_v1
+                background: url('../img/gallery/gal-01.jpg') no-repeat top left
+                background-size: cover
+            &_v2
+                background: url('../img/gallery/gal-02.jpg') no-repeat top left
+                background-size: cover
+            &_v3
+                background: url('../img/gallery/gal-03.jpg') no-repeat top left
+                background-size: cover
+            &_v4
+                background: url('../img/gallery/gal-04.jpg') no-repeat top left
+                background-size: cover
+            &_v5
+                background: url('../img/gallery/gal-05.jpg') no-repeat top left
+                background-size: cover
+            &_v6
+                background: url('../img/gallery/gal-06.jpg') no-repeat top left
+                background-size: cover
+            &_v7
+                background: url('../img/gallery/gal-07.jpg') no-repeat top left
+                background-size: cover
+            &_v8
+                background: url('../img/gallery/gal-08.jpg') no-repeat top left
+                background-size: cover
+            &_v9
+                background: url('../img/gallery/gal-09.jpg') no-repeat top left
+                background-size: cover
+            &_v10
+                background: url('../img/gallery/gal-10.jpg') no-repeat top left
+                background-size: cover
+
+

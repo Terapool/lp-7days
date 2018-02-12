@@ -2,12 +2,7 @@
   @extend %centered-inclosure
 
   &__title
-    padding: 1px
-    text-align: center
-    color: $color-02
-    font-style: italic
-    font-size: 36px
-    text-shadow: $txtSh1
+    @extend %headerH2orange
 
   &-props
     @extend %grid-wrapper
@@ -20,6 +15,7 @@
       border: 1px solid $color-b01
       display: flex
       flex-wrap: wrap
+      box-shadow: $boxSh2
 
       justify-content: space-between
 
