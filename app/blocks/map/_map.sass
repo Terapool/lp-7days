@@ -1,35 +1,24 @@
 .map
 
   &__title
-    @extend %headerH2
+    @extend %headerH2Dark
 
   &__text
+    @extend %marginCenter
     text-align: center
     color: $color-09
     font-weight: bold
     font-style: italic
     font-size: 21px
-    margin: $s1marginV/2 auto
     @media screen and (max-width: $s1)
-      margin: $s2marginV/2 auto
       font-size: 20px
     @media screen and (max-width: $s2)
-      margin: $s3marginV/2 auto
       font-size: 18px
     @media screen and (max-width: $s3)
-      margin: $s4marginV/2 auto
       font-size: 18px
     @media screen and (max-width: $s4)
-      margin: $s5marginV/2 auto
       font-size: 17px
 
   &-yandex
-    margin-top: $s1marginV/2
-    @media screen and (max-width: $s1)
-      margin-top: $s2marginV/2
-    @media screen and (max-width: $s2)
-      margin-top: $s3marginV/2
-    @media screen and (max-width: $s3)
-      margin-top: $s4marginV/2
-    @media screen and (max-width: $s4)
-      margin-top: $s5marginV/2
+    @extend %marginTop
+

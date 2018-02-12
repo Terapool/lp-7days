@@ -1,22 +1,20 @@
 .header
+  @extend %container-screen
   height: $headerHeight
-  width: $s1w
   margin: 0 auto
   background: url('../img/header__bg-1202.jpg') no-repeat center top
   display: flex
   justify-content: center
   font-family: $fontFamily-01
-
   @media screen and (max-width: $s1)
     background: none
-    width: $s2w
-  @media screen and (max-width: $s2)
-    width: $s3w
   @media screen and (max-width: $s3)
     width: 100%
     height: $headerHeight * 3
     flex-wrap: wrap
     background: none
+  @media screen and (max-width: $s4)
+    width: 100%
 
   &-address
     width: 232px
@@ -69,7 +67,6 @@
       background: $color-04
       width: 100%
       height: $headerHeight
-
 
     &__phone
       color: $color-00

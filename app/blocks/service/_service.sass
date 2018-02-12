@@ -1,8 +1,9 @@
 .service
-  @extend %centered-inclosure
+  @extend %container-screen
+  margin: 0 auto
 
   &__title
-    @extend %headerH2orange
+    @extend %headerH2Light
 
   &-props
     @extend %grid-wrapper
@@ -16,7 +17,6 @@
       display: flex
       flex-wrap: wrap
       box-shadow: $boxSh2
-
       justify-content: space-between
 
       &-image
@@ -77,23 +77,16 @@
             font-size: 18px
 
       &-text
-        width: $s1column - 2 * $s1padding
-        @media screen and (max-width: $s1)
-          width: $s2column - 2 * $s2padding
-        @media screen and (max-width: $s2)
-          width: $s3column - 2 * $s3padding
-        @media screen and (max-width: $s3)
-          width: $s4column - 2 * $s4padding
-        @media screen and (max-width: $s4)
-          width: $s5column - 2 * $s5padding
+        @extend %columnWidthPadding
 
         &__paragraph
           color: $color-00
           text-align: center
           font-size: 17px
           line-height: 20px
+
     &-item2 // yellow car
-      @extend %grid-item-wrapper
+      @extend %columnWidth
       background: url('../img/yellow-car.png') center no-repeat
       position: relative
       @media screen and (max-width: $s2)

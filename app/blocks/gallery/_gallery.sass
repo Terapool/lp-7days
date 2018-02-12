@@ -1,36 +1,35 @@
 .gallery
-    @extend %centered-inclosure
+    @extend %container-screen
+    margin: 0 auto
 
     &__title
-        @extend %headerH2orange
+        @extend %headerH2Light
 
     &-photos
         @extend %grid-wrapper
 
         &__item
-            height: 220px
+            height: $s1galleryImgHeight
             margin-bottom: $s1marginV/2
             box-shadow: $boxSh2
-
-
             @media screen and (max-width: $s1)
-                height: 175px
+                height: $s2galleryImgHeight
             @media screen and (max-width: $s2)
-                height: 140px
+                height: $s3galleryImgHeight
 
             &_type1
-                width: 164px
+                width: $s1galleryImgWType1
                 @media screen and (max-width: $s1)
-                    width: 132px
+                    width: $s2galleryImgWType1
                 @media screen and (max-width: $s2)
-                    width: 106px
+                    width: $s3galleryImgWType1
 
             &_type2
-                width: 294px
+                width: $s1galleryImgWType2
                 @media screen and (max-width: $s1)
-                    width: 234px
+                    width: $s2galleryImgWType2
                 @media screen and (max-width: $s2)
-                    width: 187px
+                    width: $s3galleryImgWType2
 
             &_v1
                 background: url('../img/gallery/gal-01.jpg') no-repeat top left

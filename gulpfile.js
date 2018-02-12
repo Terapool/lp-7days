@@ -41,6 +41,8 @@ gulp.task('build:assets', () => {
             .pipe(gulp.dest('build/fonts'));
         gulp.src('app/gallery/**/*.*')
             .pipe(gulp.dest('build/img/gallery'));
+        gulp.src('app/avatars/**/*.*')
+            .pipe(gulp.dest('build/img/avatars'));
 });
 
 
@@ -49,7 +51,7 @@ gulp.task('build', ['build:html', 'build:sass', 'build:assets']); // Entry point
 gulp.task('build:watch', ()=> {
         gulp.watch('app/index.html', ['build:html', browserSync.reload]);
         gulp.watch('app/blocks/**/*.sass', ['build:sass', browserSync.reload]);
-        gulp.watch('app/{img,slides,fonts,gallery}/**/*.*', ['build:assets', browserSync.reload])
+        gulp.watch('app/{img,slides,fonts,gallery,avatars}/**/*.*', ['build:assets', browserSync.reload])
     }
 );
 

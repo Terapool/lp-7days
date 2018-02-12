@@ -1,51 +1,45 @@
 .intro
-  @extend %centered-inclosure
+  @extend %container-screen
+  margin: 0 auto
   font-family: $fontFamily-03
 
   &__title
+    @extend %marginTop2
     text-align: center
     color: $color-10
     text-transform: uppercase
     font-size: 50px
-    margin-top: $s1marginV
     font-weight: 300
     @media screen and (max-width: $s1)
       font-size: 45px
-      margin-top: $s2marginV
     @media screen and (max-width: $s2)
       font-size: 40px
-      margin-top: $s3marginV
     @media screen and (max-width: $s3)
       font-size: 36px
-      margin-top: $s4marginV
     @media screen and (max-width: $s4)
       font-size: 26px
       margin: $s5marginV $s5margin 0
 
   &__subtitle
-    @extend %headerH2
+    @extend %headerH2Dark
 
   &__text
+    @extend %marginCenter
     color: $color-09
     font-style: italic
     font-size: 21px
     text-align: center
     width: 60%
-    margin: $s1marginV/2 auto
     @media screen and (max-width: $s1)
       width: 75%
-      margin: $s2marginV/2 auto
       font-size: 19px
     @media screen and (max-width: $s2)
-      margin: $s3marginV/2 auto
       font-size: 19px
       width: 90%
     @media screen and (max-width: $s3)
-      margin: $s4marginV/2 auto
       font-size: 19px
       width: 90%
     @media screen and (max-width: $s4)
-      margin: $s5marginV/2 auto
       font-size: 18px
       width: 95%
 
@@ -53,23 +47,22 @@
     @extend %grid-wrapper
 
     &-item
-      width: $s1column
+      @extend %columnWidth
       display: flex
       flex-direction: column
-      @media screen and (max-width: $s1)
-        width: $s2column
       @media screen and (max-width: $s2)
         width: 100%
         flex-direction: row
         justify-content: space-between
-
       @media screen and (max-width: $s3)
+        width: 100%
         margin: $s4margin auto
       @media screen and (max-width: $s4)
+        width: 100%
         margin: $s5margin auto
 
       &-picture
-        @extend %grid-item-wrapper
+        @extend %columnWidth
         display: flex
         justify-content: center
         @media screen and (max-width: $s3)
@@ -92,47 +85,19 @@
             background-position: 0 -429px
 
       &-text
-        width: $s1column
-        @media screen and (max-width: $s1)
-          width: $s2column
+        @extend %columnWidth
         @media screen and (max-width: $s2)
           width: 2 * $s3column + $s3margin
         @media screen and (max-width: $s3)
           width: $s4 - 2 * $s4margin - $introImgWidth
-        @media screen and (max-width: $s4)
-          width: $s5column
 
         &__title
-          color: $color-10
-          font-size: 22px
-          font-style: italic
-          text-align: center
-          font-weight: normal
-          margin-top: $s1marginV/2
-          @media screen and (max-width: $s1)
-            font-size: 18px
-            margin-top: $s2marginV/2
-          @media screen and (max-width: $s2)
-            font-size: 18px
-            margin-top: 0
+          @extend %headerH3
 
         &__paragraph
-          background: $color-00tr
-          margin-top: $s1marginV/2
-          padding: $s1padding
-          border-radius: 20px
-          color: $color-09
-          font-size: 16px
-          text-align: justify
-          font-style: italic
-          @media screen and (max-width: $s1)
-            font-size: 15px
-            padding: $s2padding
-            margin-top: $s2marginV/2
-          @media screen and (max-width: $s2)
-            font-size: 17px
-            padding: $s3padding
-            margin-top: $s3marginV/2
+          @extend %textArea
+          @extend %textAreaText
+
 
 
 

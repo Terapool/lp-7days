@@ -1,17 +1,13 @@
 .slider
-  width: $s1w
+  @extend %container-screen
   height: 380px
   background: url('../img/slides/n-01.jpg') top left no-repeat
   display: flex
   justify-content: center
   align-items: flex-end
-  @media screen and (max-width: $s1)
-    width: $s2w
   @media screen and (max-width: $s2)
-    width: $s3w
     height: 350px
   @media screen and (max-width: $s3)
-    width: $s4w
     height: 275px
 
   &-text

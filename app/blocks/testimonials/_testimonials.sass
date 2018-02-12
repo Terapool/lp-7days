@@ -1,0 +1,60 @@
+.testimonials
+  @extend %container-screen
+  margin: 0 auto
+
+  &__header
+    @extend %headerH2Dark
+
+  &-block
+    @extend %grid-wrapper
+    max-height: 540px
+    overflow: hidden
+
+    &-item
+      @extend %columnWidth
+
+      &-pic
+        @extend %columnWidth
+        display: flex
+        justify-content: center
+
+        &__pic
+          width: $testimonialsImageSize
+          height: $testimonialsImageSize
+          &_v1
+            background: url('../img/avatars/avatar-01.png') top left no-repeat
+
+        &__pic2
+          width: $testimonialsImageSize
+          height: $testimonialsImageSize
+          border-radius: 100%
+          text-align: center
+          line-height: $testimonialsImageSize
+          font-size: 120px
+          font-family: $fontFamily-02
+          border: 5px solid $color-09
+          &_v1
+            background: #2A5076
+            color: $color-00
+          &_v2
+            background: $color-11
+            color: $color-09
+          &_v3
+            background: $color-12
+            color: $color-00
+
+
+
+      &__title
+        @extend %headerH3
+
+      &-text
+        @extend %textArea
+
+        &__title
+          @extend %textAreaHeader
+
+        &__paragraph
+          @extend %textAreaText
+
+

@@ -1,20 +1,6 @@
-%centered-inclosure
-  width: $s1w
-  margin: 0 auto
-  @media screen and (max-width: $s1)
-    width: $s2w
-  @media screen and (max-width: $s2)
-    width: $s3w
-  @media screen and (max-width: $s3)
-    width: $s4w
-  @media screen and (max-width: $s4)
-    width: $s5w
+/* Margins, paddings */
 
-
-%grid-wrapper
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
+%margin
   margin: $s1marginV $s1margin
   @media screen and (max-width: $s1)
     margin: $s2marginV $s2margin
@@ -25,29 +11,108 @@
   @media screen and (max-width: $s4)
     margin: $s5marginV $s5margin
 
-
-%grid-item
-  width: $s1column - 2 * $s1padding
+%marginBottom
   margin-bottom: $s1marginV/2
-  padding: $s1padding
   @media screen and (max-width: $s1)
-    width: $s2column  - 2 * $s2padding
     margin-bottom: $s2marginV/2
-    padding: $s2padding
   @media screen and (max-width: $s2)
-    width: $s3column  - 2 * $s3padding
     margin-bottom: $s3marginV/2
-    padding: $s3padding
   @media screen and (max-width: $s3)
-    width: $s4column - 2 * $s4padding
-    padding: $s4padding
     margin-bottom: $s4marginV/2
   @media screen and (max-width: $s4)
-    width: $s5column - 2 * $s5padding
-    padding: $s5padding
     margin-bottom: $s5marginV/2
 
-%grid-item-wrapper
+%marginBottom2
+  margin-bottom: $s1marginV
+  @media screen and (max-width: $s1)
+    margin-bottom: $s2marginV
+  @media screen and (max-width: $s2)
+    margin-bottom: $s3marginV
+  @media screen and (max-width: $s3)
+    margin-bottom: $s4marginV
+  @media screen and (max-width: $s4)
+    margin-bottom: $s5marginV
+
+%marginTop
+  margin-top: $s1marginV/2
+  @media screen and (max-width: $s1)
+    margin-top: $s2marginV/2
+  @media screen and (max-width: $s2)
+    margin-top: $s3marginV/2
+  @media screen and (max-width: $s3)
+    margin-top: $s4marginV/2
+  @media screen and (max-width: $s4)
+    margin-top: $s5marginV/2
+
+%marginTop2
+  margin-top: $s1marginV
+  @media screen and (max-width: $s1)
+    margin-top: $s2marginV
+  @media screen and (max-width: $s2)
+    margin-top: $s3marginV
+  @media screen and (max-width: $s3)
+    margin-top: $s4marginV
+  @media screen and (max-width: $s4)
+    margin-top: $s5marginV
+
+%marginCenter
+  margin: $s1marginV/2 auto
+  @media screen and (max-width: $s1)
+    margin: $s2marginV/2 auto
+  @media screen and (max-width: $s2)
+    margin: $s3marginV/2 auto
+  @media screen and (max-width: $s3)
+    margin: $s4marginV/2 auto
+  @media screen and (max-width: $s4)
+    margin: $s5marginV/2 auto
+
+
+%marginCenter2
+  margin: $s1marginV auto
+  @media screen and (max-width: $s1)
+    margin: $s2marginV auto
+  @media screen and (max-width: $s2)
+    margin: $s3marginV auto
+  @media screen and (max-width: $s3)
+    margin: $s4marginV auto
+  @media screen and (max-width: $s4)
+    margin: $s5marginV auto
+
+%padding
+  padding: $s1padding
+  @media screen and (max-width: $s1)
+    padding: $s2padding
+  @media screen and (max-width: $s2)
+    padding: $s3padding
+  @media screen and (max-width: $s3)
+    padding: $s4padding
+  @media screen and (max-width: $s4)
+    padding: $s5padding
+
+
+
+
+/* Page structure */
+
+%container-screen
+  width: $s1w
+  @media screen and (max-width: $s1)
+    width: $s2w
+  @media screen and (max-width: $s2)
+    width: $s3w
+  @media screen and (max-width: $s3)
+    width: $s4w
+  @media screen and (max-width: $s4)
+    width: $s5w
+
+
+%grid-wrapper // container for grid
+  @extend %margin
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+%columnWidth
   width: $s1column
   @media screen and (max-width: $s1)
     width: $s2column
@@ -58,31 +123,96 @@
   @media screen and (max-width: $s4)
     width: $s5column
 
+%columnWidthX2
+  width: ($s1w - 3 * $s1margin)/2
+  @media screen and (max-width: $s1)
+    width: ($s2w - 3 * $s2margin)/2
+  @media screen and (max-width: $s2)
+    width: ($s3w - 3 * $s3margin)/2
+  @media screen and (max-width: $s3)
+    width: ($s4w - 3 * $s4margin)/2
+  @media screen and (max-width: $s4)
+    width: ($s5w - 3 * $s5margin)/2
 
-%headerH2
+%columnWidthPadding
+  width: $s1column - 2 * $s1padding
+  @media screen and (max-width: $s1)
+    width: $s2column  - 2 * $s2padding
+  @media screen and (max-width: $s2)
+    width: $s3column  - 2 * $s3padding
+  @media screen and (max-width: $s3)
+    width: $s4column - 2 * $s4padding
+  @media screen and (max-width: $s4)
+    width: $s5column - 2 * $s5padding
+
+%grid-item // items in grid with padding and text
+  @extend %marginBottom
+  @extend %padding
+  @extend %columnWidthPadding
+
+/* Headers */
+
+%headerH2 // Section header for light bg
+  @extend %marginTop
   text-align: center
-  color: $color-09
   font-size: 36px
-  margin-top: $s1marginV/2
   font-style: italic
   @media screen and (max-width: $s1)
-    font-size: 30px
-    margin-top: $s2marginV/2
+    font-size: 34px
   @media screen and (max-width: $s2)
-    font-size: 25px
-    margin-top: $s3marginV/2
+    font-size: 32px
   @media screen and (max-width: $s3)
-    font-size: 25px
-    margin-top: $s4marginV/2
+    font-size: 30px
   @media screen and (max-width: $s4)
-    font-size: 20px
+    font-size: 28px
     margin: $s5marginV/2 $s5margin 0
 
-%headerH2orange
-  text-align: center
+%headerH2Dark
+  @extend %headerH2
+  color: $color-09
+
+%headerH2Light
+  @extend %headerH2
   color: $color-02
-  font-style: italic
-  font-size: 36px
   text-shadow: $txtSh1
 
+%headerH3 // Header for items
+  @extend %marginTop
+  color: $color-10
+  font-size: 22px
+  font-style: italic
+  text-align: center
+  font-weight: normal
+  @media screen and (max-width: $s1)
+    font-size: 18px
+  @media screen and (max-width: $s2)
+    font-size: 18px
+
+/* items */
+
+%textArea
+  @extend %marginTop
+  @extend %padding
+  background: $color-00tr
+  border-radius: 20px
+
+%textAreaHeader
+  @extend %marginBottom
+  font-size: 16px
+  font-weight: bold
+  text-align: center
+  color: $color-09
+
+
+
+
+%textAreaText
+  color: $color-09
+  font-size: 16px
+  text-align: justify
+  font-style: italic
+  @media screen and (max-width: $s1)
+    font-size: 15px
+  @media screen and (max-width: $s2)
+    font-size: 17px
 

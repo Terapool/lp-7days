@@ -20,8 +20,12 @@ $s5: $s5w + $delta // Screen setpoint no 5
 // page elements
 $headerHeight: 160px
 $stripHeight: 12px // Blue line that divides sections
+
 $introImgWidth: 193px
 $introImgHeigth: 143px
+
+$testimonialsImageSize: 198px
+
 
 // Margins, columns
 
@@ -33,6 +37,10 @@ $s1marginV: 50px // to be even
 
 $s1servImg: 100px // image width in item from Service section
 
+$s1galleryImgWType1: 164px // portrait
+$s1galleryImgWType2: 294px // landscape
+$s1galleryImgHeight: 220px
+
 // for s2
 
 $s2column: 213px
@@ -41,6 +49,10 @@ $s2padding: 10px
 $s2marginV: 40px // to be even
 
 $s2servImg: 89px // image width in item from Service section
+
+$s2galleryImgWType1: 132px // portrait
+$s2galleryImgWType2: 234px // landscape
+$s2galleryImgHeight: 175px
 
 // for s3
 
@@ -51,6 +63,9 @@ $s3marginV: 30px // to be even
 
 $s3servImg: 94px // image width in item from Service section
 
+$s3galleryImgWType1: 106px // portrait
+$s3galleryImgWType2: 187px // landscape
+$s3galleryImgHeight: 140px
 
 // for s4
 
@@ -87,7 +102,8 @@ $color-08: #000912 // Slider bg
 $color-09: #0C3f6C // Intro text
 $color-10: #0077ED
 $color-10tr: rgba(0, 119, 237, 0.75)
-
+$color-11: #BFC813
+$color-12: #B27A13
 
 
 // Fonts
@@ -99,51 +115,11 @@ $txtSh1: 2px 2px 2px $color-05
 $boxSh2: 3px 4px 5px 0px rgba(0,0,0,0.5)
 
 
-@font-face
-  font-family: 'Gabriola M'
-  src:  url('../fonts/Gabriola.woff2') format('woff2'), url('../fonts/Gabriola.woff') format('woff'), url('../fonts/Gabriola.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: 'Roboto Condensed'
-  src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff'), url('../fonts/RobotoCondensed-Regular.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: 'Roboto Condensed'
-  src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-LightItalic.woff') format('woff'), url('../fonts/RobotoCondensed-LightItalic.ttf') format('truetype')
-  font-weight: 300
-  font-style: italic
-
-@font-face
-  font-family: 'Roboto Condensed'
-  src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'), url('../fonts/RobotoCondensed-Bold.woff') format('woff'), url('../fonts/RobotoCondensed-Bold.ttf') format('truetype')
-  font-weight: bold
-  font-style: normal
-
-@font-face
-  font-family: 'Roboto Condensed'
-  src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff') format('woff'), url('../fonts/RobotoCondensed-Light.ttf') format('truetype')
-  font-weight: 300
-  font-style: normal
-
-@font-face
-  font-family: 'Roboto Condensed'
-  src: url('../fonts/RobotoCondensed-Italic.woff2') format('woff2'), url('../fonts/RobotoCondensed-Italic.woff') format('woff'), url('../fonts/RobotoCondensed-Italic.ttf') format('truetype')
-  font-weight: normal
-  font-style: italic
-
-@font-face
-  font-family: 'Roboto Condensed'
-  src: url('../fonts/RobotoCondensed-BoldItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-BoldItalic.woff') format('woff'), url('../fonts/RobotoCondensed-BoldItalic.ttf') format('truetype')
-  font-weight: bold
-  font-style: italic
 
 
 // Imports
 @import "reset"
+@import "fonts"
 @import "templates"
 @import "page-structure"
 
@@ -154,6 +130,11 @@ $boxSh2: 3px 4px 5px 0px rgba(0,0,0,0.5)
 @import "service/service"
 @import "map/map"
 @import "gallery/gallery"
+@import "testimonials/testimonials"
+@import "team/team"
+@import "faq/faq"
+
+
 
 
 

@@ -1,0 +1,81 @@
+.faq
+  @extend %container-screen
+  margin: 0 auto
+
+  &-block
+    @extend %grid-wrapper
+
+    &-item
+      @extend %columnWidthX2
+      @media screen and (max-width: $s3)
+        width: $s4w - 2 * $s4margin
+      @media screen and (max-width: $s4)
+        width: $s5w - 2 * $s5margin
+
+      &-question
+        @extend %marginTop
+        border-radius:  0 20px 0 20px
+
+        &-header
+          height: 60px
+          background: $color-09
+          vertical-align: middle
+          border-radius:  0 20px 0 0
+
+          &__title
+            @extend %padding
+            color: $color-00
+            font-size: 22px
+            font-style: italic
+            font-weight: normal
+
+        &-answer
+          @extend %padding
+          background: $color-00tr
+          border-radius:  0 0 0 20px
+
+          &__paragraph
+            @extend %textAreaText
+
+
+      &_v1
+        background: url('../img/logo.gif') no-repeat bottom center
+
+      &__header
+        @extend %headerH2Dark
+
+      &-text
+        @extend %textArea
+
+
+
+        &__phone
+          @extend %marginBottom
+          font-family: $fontFamily-01
+          font-size: 25px
+          font-weight: bold
+          color: $color-09
+          text-align: center
+          @media screen and (max-width: $s2)
+            font-size: 22px
+
+          &:first-child
+            @extend %marginTop
+
+          &_big
+            font-size: 35px
+            @media screen and (max-width: $s2)
+              font-size: 26px
+          &_operator
+            padding: 5px
+            border-radius: 5px
+            color: $color-00
+
+            &-v1
+              background: $color-09
+
+            &-v2
+              background: $color-10
+
+
+
